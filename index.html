@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的世界 | Minecraft</title>
+    <link href="src/tupian/tb.png" rel="icon" type="image/png">
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .toubu {
+            background-color: #171615;
+            width: 100%;
+            height: 130px;
+        }
+
+        .top {
+            background-color: black;
+            height: 40px;
+            width: 100%;
+        }
+
+        .top p {
+            font-weight: bold;
+            color: #a0e080;
+            line-height: 40px;
+        }
+
+        .top p:hover {
+            color: white;
+        }
+
+        .p1 {
+            margin-left: 130px;
+            float: left;
+        }
+
+        .p2 {
+            float: right;
+            margin-right: 50px;
+        }
+
+        .dhl {
+            margin-left: 100px;
+        }
+
+        .l1 {
+            height: 90px;
+            width: 50px;
+            line-height: 90px;
+            padding-left: 30px;
+            color: white;
+            font-weight: bold;
+            float: left;
+            display: block;
+            transition: width 0.8s ease, font-size 1s ease;
+        }
+
+        .l1:hover {
+            background-color: #222222;
+            font-size: 24px;
+            color: #a0e080;
+            width: 220px;
+        }
+
+        .l1:hover .u1 {
+            display: block;
+        }
+
+        .u1 {
+            margin-left: -30px;
+            display: none;
+        }
+
+        .u1 li {
+            position: relative; /* 指定相对定位 */
+            z-index: 2; /* 将 z-index 属性设置为 2 */
+            white-space: nowrap; /*不换行*/
+            height: 40px;
+            font-size: 14px;
+            line-height: 40px;
+            color: black;
+            background-color: rgba(141, 192, 115, 0.8);
+            overflow: hidden; /* 超出部分隐藏 */
+        }
+
+        .u1 img {
+            margin: 0 10px;
+            padding-top: 10px;
+        }
+
+        .u1 li:hover {
+            background-color: black;
+            color: #a0e080;
+        }
+
+        .l2 {
+            height: 90px;
+            width: 50px;
+            padding-left: 30px;
+            line-height: 90px;
+            color: white;
+            font-weight: bold;
+            float: left;
+            display: block;
+            transition: width 0.8s ease, font-size 1s ease;
+            overflow: hidden;
+        }
+
+        .l2:hover {
+            background-color: #222222;
+            font-size: 10px;
+            line-height: 60px;
+            transition: linear 0.5s;
+            color: #a0e080;
+            overflow: hidden;
+            width: 120px;
+        }
+
+        .l2:hover .sq {
+            transform: translateY(-80px);
+        }
+
+        .sq {
+            transition: 0.2s linear;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+
+        .logo {
+            width: 200px;
+            height: 90px;
+        }
+
+        .logo1 {
+            width: 200px;
+            height: 60px;
+        }
+
+        .logo2 {
+            width: 75px;
+            height: 20px;
+            margin-left: 62px;
+        }
+
+        .huoqu {
+            width: 200px;
+            height: 40px;
+            background-color: #52a535;
+            float: right;
+            margin-top: -65px;
+            margin-right: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .huoqu p {
+            height: 35px;
+            width: 210px;
+            margin: 2px -5px;
+            background-color: rgba(60, 133, 39, 0.5);
+            display: block;
+        }
+
+        .huoqu p:hover {
+            background-color: rgba(5, 113, 33, 0.5);
+        }
+
+        .kais {
+            background-image: url("src/tupian/nt1.png");
+            width: 100%;
+            height: 600px;
+            background-color: black;
+        }
+
+        .youxi {
+            width: 1200px;
+            height: 600px;
+            background-image: url("src/tupian/bj1.webp");
+            background-repeat: no-repeat;
+        }
+
+        .anjian {
+            padding-top: 250px;
+            width: 550px;
+            height: 100%;
+        }
+
+        .yx {
+            width: 504px;
+            height: 40px;
+            background-color: #c6b4a5;
+            text-align: center;
+            line-height: 40px;
+            border: 2px solid black;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: #000000 2px 2px 3px;
+        }
+
+        .mods {
+            width: 240px;
+            height: 40px;
+            background-color: #c6b4a5;
+            text-align: center;
+            line-height: 40px;
+            border: 2px solid black;
+            color: white;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            float: left;
+            text-shadow: #000000 2px 2px 3px;
+        }
+
+        .yx:hover {
+            border: 2px solid white;
+            box-shadow: #000000 5px 0 10px;
+            color: rgba(250, 250, 170)
+        }
+
+        .mods:hover {
+            border: 2px solid white;
+            box-shadow: #000000 5px 0 10px;
+            color: rgba(250, 250, 170)
+        }
+
+        .xiyang {
+            background-image: url("src/tupian/bj2.png");
+            height: 1300px;
+            padding-top: 100px;
+        }
+
+        .xiyang1 {
+            width: 1100px;
+            height: 500px;
+            background-color: white;
+        }
+
+        .biaoti {
+            font-weight: bold;
+            font-size: 34px;
+            letter-spacing: 10px;
+            text-align: center;
+            padding-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .xiyang2 {
+            padding-top: 20px;
+            margin-top: -20px;
+            width: 800px;
+            overflow: hidden;
+            height: 280px;
+        }
+
+        .slide {
+            animation: slide 25s ease 2s infinite;
+            display: flex;
+        }
+
+        @keyframes slide {
+            from {
+                transform: translateX(-90px);
+            }
+            20% {
+                transform: translateX(-430px);
+            }
+            40% {
+                transform: translateX(-770px);
+            }
+            60% {
+                transform: translateX(-1110px);
+            }
+            80% {
+                transform: translateX(-1450px);
+            }
+            100% {
+                transform: translateX(-1790px);
+            }
+        }
+
+        .xiyang3 {
+            width: 300px;
+            height: 280px;
+            margin-right: 40px;
+        }
+
+        .xiyang3 img {
+            width: 300px;
+            height: 170px;
+            float: left;
+            transition: transform 0.5s ease-out; /* 添加过渡动画效果 */
+        }
+
+        .xiyang3 img:hover {
+            transform: scale(1.2);
+        }
+
+        .bt1 {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+            font-size: 20px;
+            font-weight: bold;
+            color: #70dc48;
+        }
+
+        .bt2 {
+            padding: 0 5px;
+            width: 290px;
+            height: 50px;
+            float: left;
+            text-align: center;
+        }
+
+        .xiaoxi {
+            height: 500px;
+            color: white;
+        }
+
+        .xiaoxi1 {
+            margin: 0 auto;
+            height: 500px;
+            width: 1100px;
+        }
+
+        .xiaoxi1 p {
+            text-align: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: #52a535;
+            margin-bottom: 30px;
+        }
+
+        .xiaoxi1 img {
+            height: 400px;
+            width: 700px;
+            margin-left: 200px;
+            transition: transform 0.5s ease-out; /* 添加过渡动画效果 */
+            box-shadow: 10px 10px 20px #383737;
+        }
+
+        .xiaoxi1 img:hover {
+            transform: scale(1.3);
+            box-shadow: 15px 15px 50px #313131;
+        }
+
+        /*商城*/
+        .shangcheng {
+            background-image: url("src/tupian/bj4.png");
+            margin-top: -100px;
+        }
+
+        .bj3 {
+            background-image: url("src/tupian/bj3.png");
+            height: 100px;
+        }
+
+        .bj5 {
+            background-image: url("src/tupian/bj5.png");
+            height: 100px;
+        }
+
+        .bj6 {
+            background-image: url("src/tupian/bj2.png");
+            height: 100px;
+        }
+
+        .shangcheng1 {
+            width: 1100px;
+            height: 1000px;
+            padding-top: 50px;
+        }
+
+        .sctp {
+            width: 475px;
+            height: 285px;
+            float: left;
+            margin-bottom: 60px;
+            margin-left: 50px;
+            box-shadow: 3px 3px 10px black;
+            transition: transform 0.5s ease-out; /* 添加过渡动画效果 */
+        }
+
+        .sctp:hover {
+            transform: scale(1.1); /* 在悬停图像上时缩放图像 */
+        }
+
+        .shangcheng2 {
+            width: 425px;
+            height: 285px;
+            margin: 0 0 60px 50px;
+            padding-left: 50px;
+            float: left;
+        }
+
+        .scp1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        .scjt {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-top: 30px;
+        }
+
+        .scp3 {
+            padding: 5px 5px 5px 30px;
+            margin-left: -20px;
+            color: #3d7a28;
+            margin-top: 25px;
+            float: left;
+            font-weight: bold;
+        }
+
+        .scjt1 {
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-left: -25px;
+            display: none;
+        }
+
+        .scp3:hover {
+            background-color: #3d7a28;
+            color: white;
+        }
+
+        .scp3:hover .scjt1 {
+            display: block;
+        }
+
+        /*社区*/
+        .shequ {
+            background-image: url("src/tupian/tiankong.png");
+        }
+
+        .sqbj {
+            background-image: url("src/tupian/tudi.png");
+            margin-top: -250px;
+            height: 500px;
+        }
+
+        .shequ1 {
+            width: 1120px;
+            height: 1200px;
+        }
+
+        .bt3 {
+            text-align: center;
+            margin-top: -30px;
+        }
+
+        .tansuo {
+            text-align: center;
+            margin-top: 15px;
+            width: 100px;
+            height: 20px;
+            margin-bottom: 50px;
+        }
+
+        .jt {
+            width: 20px;
+            height: 20px;
+            float: left;
+        }
+
+        .jt1 {
+            display: none;
+            width: 20px;
+            height: 20px;
+            float: left;
+            margin-left: -30px;
+        }
+
+        .bt4 {
+            float: left;
+            color: #3d7a28;
+            padding: 5px 5px 5px 35px;
+            margin-top: -5px;
+            margin-left: -25px;
+            font-weight: bold;
+        }
+
+        .bt4:hover {
+            background-color: #3d7a28;
+            color: white;
+        }
+
+        .bt4:hover .jt1 {
+            display: block;
+        }
+
+        .zp1 {
+            height: 550px;
+            width: 550px;
+            overflow: hidden;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .zpp1 {
+            font-weight: bold;
+            font-size: 24px;
+            color: #a90303;
+            text-align: center;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+
+        .zpp2 {
+            text-align: center;
+            color: white;
+        }
+
+        .zp1 img {
+            width: 550px;
+            height: 550px;
+            transition: transform 0.5s ease-out; /* 添加过渡动画效果 */
+        }
+
+        .zpd1 {
+            width: 100%;
+            height: 130px;
+            margin-top: -80px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative; /* 指定相对定位 */
+            z-index: 2; /* 将 z-index 属性设置为 2 */
+            transition: all 0.3s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .zp1 img:hover + .zpd1,
+        .zpd1:hover {
+            transform: translateY(-50px);
+        }
+
+        .zp1 img:hover {
+            transform: scale(1.15); /* 在悬停图像上时缩放图像 */
+        }
+
+        .zp2 {
+            height: 270px;
+            width: 270px;
+            overflow: hidden;
+            float: left;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .zp2p1 {
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            padding-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .zp2p2 {
+            text-align: center;
+            color: white;
+        }
+
+        .zp2d1 {
+            width: 100%;
+            height: 110px;
+            margin-top: -60px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative; /* 指定相对定位 */
+            z-index: 2; /* 将 z-index 属性设置为 2 */
+            transition: all 0.3s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .zp2 img {
+            height: 270px;
+            width: 270px;
+            transition: transform 0.5s ease-out; /* 添加过渡动画效果 */
+        }
+
+        .zp2 img:hover + .zp2d1,
+        .zp2d1:hover {
+            transform: translateY(-35px);
+        }
+
+        .zp2 img:hover {
+            transform: scale(1.15); /* 在悬停图像上时缩放图像 */
+        }
+
+        .zp3d1 {
+            width: 100%;
+            height: 110px;
+            margin-top: -60px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative; /* 指定相对定位 */
+            z-index: 2; /* 将 z-index 属性设置为 2 */
+            transition: all 0.3s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .zp2 img:hover + .zp3d1,
+        .zp3d1:hover {
+            transform: translateY(-55px);
+        }
+
+        .zp4d1 {
+            width: 100%;
+            height: 170px;
+            margin-top: -60px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative; /* 指定相对定位 */
+            z-index: 2; /* 将 z-index 属性设置为 2 */
+            transition: all 0.3s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .zp2 img:hover + .zp4d1,
+        .zp4d1:hover {
+            transform: translateY(-95px);
+        }
+
+        .zp5d1 {
+            width: 100%;
+            height: 270px;
+            line-height: 270px;
+            font-size: 34px;
+            background-color: rgba(0, 0, 0, 0.6);
+            position: relative; /* 指定相对定位 */
+            z-index: 2; /* 将 z-index 属性设置为 2 */
+            transition: all 0.5s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .zp2 img:hover + .zp5d1,
+        .zp5d1:hover {
+            transform: translateY(-275px);
+        }
+
+        /*底部*/
+        footer {
+            background-image: url("src/tupian/dibubj.png");
+            height: 300px;
+        }
+
+        .dibu3 {
+            padding-top: 60px;
+            width: 1100px;
+        }
+
+        .dibu1 {
+            width: 320px;
+            height: 150px;
+            float: left;
+            padding-top: 30px;
+            background-image: url("src/tupian/pig.png");
+            background-size: cover;
+        }
+
+        .dibu1 p {
+            width: 210px;
+            margin-top: 15px;
+            font-size: 15px;
+            color: #3d7a28;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .logo3 {
+            margin-left: 55px;
+            height: 70px;
+        }
+
+        .logo4 {
+            margin-left: 40px;
+            height: 50px;
+            background-color: black;
+            padding: 10px;
+        }
+
+        .dibu2 {
+            margin-top: -20px;
+            width: 710px;
+            height: 200px;
+            float: right;
+            background-image: url("src/tupian/dog3.png");
+            background-size: cover;
+        }
+
+        .dbp1 {
+            font-weight: bold;
+            font-size: 22px;
+            writing-mode: vertical-rl;
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+        .db21 {
+            width: 60px;
+            height: 60px;
+            background-color: #f5e5cb;
+            margin-top: -90px;
+            margin-left: 150px;
+            background-image: url("src/tupian/wx.png");
+            background-size: cover;
+            border: 5px #52a535 solid;
+            float: left;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .db21:hover {
+            background-color: #52a535;
+            transform: scale(2); /* 在悬停图像上时缩放图像 */;
+            border: 2px #52a535 solid;
+        }
+
+        .wxewm {
+            height: 61px;
+            margin-left: 65px;
+            margin-top: 65px;
+            transition: all 0.5s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .db21:hover .wxewm,
+        .wxewm:hover {
+            transform: translateY(-66px) translatex(-65px);
+        }
+
+        .db22 {
+            float: left;
+            width: 60px;
+            height: 60px;
+            margin-left: 260px;
+            margin-top: -90px;
+            background-image: url("src/tupian/qq.png");
+            background-size: cover;
+            background-color: #f5e5cb;
+            border: 5px deepskyblue solid;
+            transition: all 0.5s ease-in-out; /* 添加过渡动画效果 */
+            overflow: hidden;
+        }
+
+        .db22:hover {
+            background-color: deepskyblue;
+            transform: scale(2); /* 在悬停图像上时缩放图像 */;
+            border: 2px solid deepskyblue;
+        }
+
+        .qqewm {
+            height: 60px;
+            margin-left: 65px;
+            margin-top: 65px;
+            transition: all 0.5s ease-in-out; /* 添加过渡动画效果 */
+        }
+
+        .db22:hover .qqewm,
+        .qqewm:hover {
+            transform: translateY(-65px) translatex(-65px);
+        }
+
+        .db23 {
+            float: left;
+            width: 60px;
+            height: 60px;
+            margin-left: 365px;
+            margin-top: -90px;
+            background-image: url("src/tupian/bh.png");
+            background-size: cover;
+            background-color: #f5e5cb;
+            border: 5px aqua solid;
+            transition: all 0.5s ease-in-out; /* 添加过渡动画效果 */
+            overflow: hidden;
+        }
+        .db23 p{
+            color: aqua;
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 60px;
+            height: 60px;
+            width: 190px;
+            margin-top: 60px;
+            margin-left: 60px;
+            text-align: center;
+            background-color: #3d7a28;
+            transition: all 0.5s ease-in-out; /* 添加过渡动画效果 */
+        }
+        .db23:hover p{
+            transform: translateY(-60px) translatex(-60px) ;
+        }
+
+        .db23:hover {
+            width: 190px;
+            transform: scale(1.2); /* 在悬停图像上时缩放图像 */;
+            border: 2px solid aqua;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div class="toubu">
+    <div class="top">
+        <p class="p1">要致富，先撸树！</p>
+        <p class="p2">登入</p>
+        <p class="p2">注册</p>
+    </div>
+    <ul class="dhl">
+        <li class="l1">游戏
+            <ul class="u1">
+                <li><img src="src/tupian/yx1.jpg">MINECRAFT</li>
+                <li><img src="src/tupian/yx2.jpg">MINECRAFT DUNGEONS</li>
+                <li><img src="src/tupian/yx3.jpg">MINECRAFT LEGENDS</li>
+                <li><img src="src/tupian/yx4.png">MINECRAFT EDUCATION</li>
+            </ul>
+        </li>
+        <li class="l2">社区<p class="sq">进入社区</p></li>
+        <li class="l2">商品<p class="sq">进入商城</p></li>
+        <li class="l2">设计<p class="sq">04李亮</p></li>
+    </ul>
+    <div class="logo">
+        <img class="logo1" src="src/tupian/logo2.svg">
+        <img class="logo2" src="src/tupian/logo.webp">
+    </div>
+    <div class="huoqu"><p>获取 Minecraft</p></div>
+</div>
+<div class="kais">
+    <div class="youxi">
+        <div class="anjian">
+            <div class="anjian1">
+                <div class="yx">单人游戏</div>
+                <div class="yx">多人游戏</div>
+                <div class="mods">Mods</div>
+                <div class="mods">Minecraft Realms</div>
+                <div class="mods">选项</div>
+                <div class="mods">退出游戏</div>
+                <audio id="myAudio">
+                    <source src="src/tupian/wdsjyy" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="xiyang">
+    <div class="xiyang1"><p class="biaoti">世界在你手中</p>
+        <div class="xiyang2">
+            <div class="slide">
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(1).png">
+                    <p class="bt1">夕阳</p>
+                    <p class="bt2">太阳坠下了地平线，天空中的火烧云渐渐回归了洁白，想和你一起看每天的夕阳！</p>
+                </div>
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(2).png">
+                    <p class="bt1">冒险</p>
+                    <p class="bt2">探索自己独一无二的世界，挺过黑夜，并创建你能想象的一切！</p>
+                </div>
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(3).png">
+                    <p class="bt1">鲜花</p>
+                    <p class="bt2">生活明朗，鲜花可爱！要一起赏花吗？</p>
+                </div>
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(4).png">
+                    <p class="bt1">海洋</p>
+                    <p class="bt2">海的那边会是什么呢？一起来探索吧！</p>
+                </div>
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(5).png">
+                    <p class="bt1">艺术</p>
+                    <p class="bt2">生活处处是艺术，去发现去创造！</p>
+                </div>
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(1).png">
+                    <p class="bt1">夕阳</p>
+                    <p class="bt2">太阳坠下了地平线，天空中的火烧云渐渐回归了洁白，想和你一起看每天的夕阳！</p>
+                </div>
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(2).png">
+                    <p class="bt1">冒险</p>
+                    <p class="bt2">探索自己独一无二的世界，挺过黑夜，并创建您能想象的一切！</p>
+                </div>
+                <div class="xiyang3">
+                    <img src="src/tupian/xiyang1%20(3).png">
+                    <p class="bt1">鲜花</p>
+                    <p class="bt2">生活明朗，鲜花可爱！要一起赏花吗？</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="xiaoxi">
+        <p class="biaoti">最新消息</p>
+        <div class="xiaoxi1"><p>我的世界1.20将于6月7日正式发布！</p> <img src="src/tupian/zxxx.jpeg"></div>
+    </div>
+</div>
+
+<div class="shangcheng">
+    <div class="bj3"></div>
+    <div class="shangcheng1">
+        <div class="shangcheng2"><p class="scp1">极其精彩的索尼克材质包！</p>
+            <p class="scp2">
+                这一完整材质包的灵感源自绿色山丘和迷宫等标志性地带，皆在让您的整个世界焕然一新，转变为一个独特但熟悉的景观！</p>
+            <img class="scjt" src="src/tupian/jiantou.svg">
+            <p class="scp3"><img class="scjt1" src="src/tupian/jiantou1.png">了解更多</p>
+        </div>
+        <img class="sctp" src="src/tupian/sc%20(1).png">
+        <img class="sctp" src="src/tupian/sc%20(2).jpg">
+        <div class="shangcheng2"><p class="scp1">集结主世界的一切力量</p>
+            <p class="scp2">
+                高举旗帜，激励您的盟友打败贪婪的猪灵，拯救主世界。现已推出。</p>
+            <img class="scjt" src="src/tupian/jiantou.svg">
+            <p class="scp3"><img class="scjt1" src="src/tupian/jiantou1.png">立即购买</p>
+        </div>
+        <div class="shangcheng2"><p class="scp1">别具风格的庆祝</p>
+            <p class="scp2">
+                参加 Minecraft 主题派对，你只需要准备个性化的服装、配饰和派对用品！</p>
+            <img class="scjt" src="src/tupian/jiantou.svg">
+            <p class="scp3"><img class="scjt1" src="src/tupian/jiantou1.png">立即购买</p>
+        </div>
+        <img class="sctp" src="src/tupian/sc%20(3).jpg">
+    </div>
+    <div class="bj5"></div>
+    <div class="bj6"></div>
+</div>
+<div class="shequ">
+    <div class="bj3"></div>
+    <div class="shequ1">
+        <p class="biaoti">玩转社区</p>
+        <p class="bt3">发现最好的 Add-On、模组，以及非凡的 Minecraft 社区正在创建的更多内容！</p>
+        <div class="tansuo"><img class="jt" src="src/tupian/jiantou.svg">
+            <p class="bt4"><img class="jt1" src="src/tupian/jiantou1.png">探索</p>
+        </div>
+        <div class="zp">
+            <div class="zp1"><img src="src/tupian/sq1.png">
+                <div class="zpd1">
+                    <p class="zpp1">今日头条 ：重金悬赏Lee</p>
+                    <p class="zpp2">重金悬赏通缉犯Lee，赏金 ：100绿宝石</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq2.png">
+                <div class="zp2d1">
+                    <p class="zp2p1">建筑 ：凉亭教学</p>
+                    <p class="zp2p2">想要漂亮的凉亭吗？快学起来！</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq3.png">
+                <div class="zp3d1">
+                    <p class="zp2p1">征召 ：寻求冒险伙伴</p>
+                    <p class="zp2p2">寻找一起探索地狱的勇士，你有兴趣和我一起冒险吗？</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq4.jpg">
+                <div class="zp3d1">
+                    <p class="zp2p1">吐槽 ：家人们谁懂啊</p>
+                    <p class="zp2p2">家人们，谁懂啊，今天遇到一个下头瓜...救命啊，咱就是说...我真的会谢</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq5.png">
+                <div class="zp3d1">
+                    <p class="zp2p1">I am Iron man.</p>
+                    <p class="zp2p2">I am Iron man.I am Iron man.I am Iron man.</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq6.png">
+                <div class="zp3d1">
+                    <p class="zp2p1">悬疑 ：消失的绿宝石</p>
+                    <p class="zp2p2">村民家中频频被盗，是人性的扭曲还是道德的沦丧</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq7.png">
+                <div class="zp2d1">
+                    <p class="zp2p1">动物世界 ：人类最好的伙伴</p>
+                    <p class="zp2p2">世界上不能没有小狗！！！</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq8.png">
+                <div class="zp4d1">
+                    <p class="zp2p1">猫咪社 ：喵~</p>
+                    <p class="zp2p2">喵喵喵，喵喵喵，喵喵喵喵喵；喵喵喵，喵喵喵，喵喵喵喵喵；喵喵喵，喵喵喵喵喵喵喵喵，喵喵喵喵，喵喵喵喵喵喵喵喵喵喵。</p>
+                </div>
+            </div>
+            <div class="zp2"><img src="src/tupian/sq9.png">
+                <div class="zp5d1">
+                    <p class="zp2p1">更多 >></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sqbj"></div>
+</div>
+<footer>
+    <div class="dibu3">
+        <div class="dibu1"><img class="logo3" src="src/tupian/mojang.png"><img class="logo4"
+                                                                               src="src/tupian/Xbox_Game_Studio.webp">
+            <p>查看 Mojang 条款和条件</p></div>
+        <div class="dibu2"><p class="dbp1">联 系 我 们
+            <div class="db21"><img class="wxewm" src="src/tupian/wxewm.jpg"></div>
+            <div class="db22"><img class="qqewm" src="src/tupian/qqewm.jpg"></div>
+            <div class="db23"><p>188 8888 8888</p></div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
+<script>
+    const audio = document.getElementById("myAudio");
+    const div = document.querySelector(".anjian1");
+
+    div.addEventListener("mouseover", function () {
+        audio.currentTime = 0;
+        audio.play();
+    });
+</script>
